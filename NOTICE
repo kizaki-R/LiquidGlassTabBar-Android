@@ -1,0 +1,18 @@
+LiquidGlassTabBar-Android
+Copyright 2026 kizaki-R
+
+This product includes software developed by third parties:
+
+AndroidLiquidGlass (backdrop library)
+  Copyright 2025 Kyant
+  https://github.com/Kyant0/AndroidLiquidGlass
+  Licensed under the Apache License, Version 2.0.
+
+  The following parts of this project are adapted from AndroidLiquidGlass (its catalog sample and the
+  internal lens shaders) and carry the same licence:
+    - the drag / press animation (DampedDragAnimation)
+    - the interactive highlight (InteractiveHighlight)
+    - the drag gesture inspector (DragGestureInspector)
+    - the refraction / dispersion math of the lens shader (GlassLens)
+    - the overall layering idea of the bottom tabs
+  The library itself (io.github.kyant0:backdrop, io.github.kyant0:shapes) is used as a dependency.
