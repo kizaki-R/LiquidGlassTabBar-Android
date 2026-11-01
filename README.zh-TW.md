@@ -8,11 +8,11 @@ Jetpack Compose 的底部分頁列（以下稱底欄）。按住選取藥丸時�
 
 ## 需求
 
-下表是這個函式庫實際建置、執行時用的版本，更舊的版本沒試過。
+下表是這個函式庫實際建置、執行時用的版本，更舊的工具版本沒試過。
 
 | | 版本 |
 |---|---|
-| Android | `minSdk` 24；透鏡效果需要 API 33 以上；實機跑過 API 36 |
+| Android | `minSdk` 24；透鏡效果需要 API 33 以上；實機跑過 API 36，模擬器跑過 API 32 至 35 |
 | Kotlin | 2.4.10 |
 | Compose | BOM 2026.09.00（Compose 1.12） |
 | Android Gradle Plugin | 9.2.1 |
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.1.0")
+    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.2.0")
 }
 ```
 
@@ -165,8 +165,8 @@ LiquidGlassTabBar(/* ... */ darkTheme = darkTheme, style = style) { /* ... */ }
 
 ## 限制
 
-- 只支援 Android。透鏡需要 API 33；更低的版本，程式會略過透鏡著色器，這條路徑還沒跑過。
-- 只在一支手機上跑過：Android 16（API 36）。低階機型沒有量過效能。
+- 只支援 Android。透鏡需要 API 33；API 32 會略過透鏡著色器，膠囊畫成沒有折射和彩邊的半透明形狀，這條路徑只在模擬器的淺色主題跑過；API 32 以下還沒跑過。
+- 實機只跑過一支手機：Android 16（API 36）；另在 x86_64 模擬器跑過 API 32 至 35。模擬器是軟體繪製，不能代表畫面流暢度。低階機型沒有量過效能。
 - 彩色邊很細，內容裡有銳利邊緣的地方最容易看到，純色背景上很淡。
 - 從右到左的版面，程式裡有處理，沒試過。
 - 每格等寬、排成一列。徽章、文字標籤之類的東西，放在你傳進來的分頁內容裡。

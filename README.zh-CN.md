@@ -8,11 +8,11 @@ Jetpack Compose 的底部标签栏（以下称底栏）。按住选中胶囊时�
 
 ## 要求
 
-下表是这个库实际构建、运行时用的版本，更旧的版本没试过。
+下表是这个库实际构建、运行时用的版本，更旧的工具版本没试过。
 
 | | 版本 |
 |---|---|
-| Android | `minSdk` 24；透镜效果需要 API 33 以上；真机跑过 API 36 |
+| Android | `minSdk` 24；透镜效果需要 API 33 以上；真机跑过 API 36，模拟器跑过 API 32 至 35 |
 | Kotlin | 2.4.10 |
 | Compose | BOM 2026.09.00（Compose 1.12） |
 | Android Gradle Plugin | 9.2.1 |
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.1.0")
+    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.2.0")
 }
 ```
 
@@ -165,8 +165,8 @@ LiquidGlassTabBar(/* ... */ darkTheme = darkTheme, style = style) { /* ... */ }
 
 ## 限制
 
-- 只支持 Android。透镜需要 API 33；更低的版本，代码会跳过透镜着色器，这条路径还没跑过。
-- 只在一部手机上跑过：Android 16（API 36）。低端机型没有测过性能。
+- 只支持 Android。透镜需要 API 33；API 32 会跳过透镜着色器，胶囊画成没有折射和彩边的半透明形状，这条路径只在模拟器的浅色主题跑过；API 32 以下还没跑过。
+- 真机只跑过一部手机：Android 16（API 36）；另在 x86_64 模拟器跑过 API 32 至 35。模拟器是软件渲染，不能代表帧率。低端机型没有测过性能。
 - 彩色边很细，内容里有锐利边缘的地方最容易看到，纯色背景上很淡。
 - 从右到左的布局，代码里有处理，没试过。
 - 每格等宽、排成一行。徽标、文字标签之类的东西，放在你传进来的标签内容里。

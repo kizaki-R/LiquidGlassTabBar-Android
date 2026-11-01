@@ -11,7 +11,7 @@ Read `README.md` for the full picture and `docs/PARAMETERS.md` for every tunable
 
 ## Before you start
 
-Check the project, because the library was built and run only with these versions: Kotlin 2.4.10, Compose BOM 2026.09.00 (Compose 1.12), AGP 9.2.1, Gradle 9.5.0, `compileSdk` 37, `minSdk` 24. It was run on Android 16 (API 36). The lens shader needs API 33; below that the code skips it and that path is untested. Its dependency, Kyant0's backdrop 2.0.1, is built against Compose 1.12 and Kotlin 2.4.10, so an older Compose or Kotlin may not resolve. Tell the user if the project is older instead of working around it silently.
+Check the project, because the library was built and run only with these versions: Kotlin 2.4.10, Compose BOM 2026.09.00 (Compose 1.12), AGP 9.2.1, Gradle 9.5.0, `compileSdk` 37, `minSdk` 24. It was run on a phone with Android 16 (API 36) and on emulators for API 32 to 35. The lens shader needs API 33; on API 32 the code skips it and draws a plain translucent pill (run once, light theme only), and nothing older has been run. Its dependency, Kyant0's backdrop 2.0.1, is built against Compose 1.12 and Kotlin 2.4.10, so an older Compose or Kotlin may not resolve. Tell the user if the project is older instead of working around it silently.
 
 Ask where the library should come from if the user has not said: JitPack (`com.github.kizaki-R:LiquidGlassTabBar-Android:<tag>`, repository `https://jitpack.io`), or the `liquidglass` module copied into the project and included with `include(":liquidglass")`.
 

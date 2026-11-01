@@ -8,11 +8,11 @@ The lens is drawn by an AGSL shader, so it needs Android 13 (API 33). The number
 
 ## Requirements
 
-This is what the library was built and run with. Nothing older has been tried.
+This is what the library was built and run with. No older tool version has been tried.
 
 | | Version |
 |---|---|
-| Android | `minSdk` 24, lens effect on API 33+, run on API 36 |
+| Android | `minSdk` 24, lens effect on API 33+; run on API 36 (phone) and API 32 to 35 (emulator) |
 | Kotlin | 2.4.10 |
 | Compose | BOM 2026.09.00 (Compose 1.12) |
 | Android Gradle Plugin | 9.2.1 |
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.1.0")
+    implementation("com.github.kizaki-R:LiquidGlassTabBar-Android:v0.2.0")
 }
 ```
 
@@ -165,8 +165,8 @@ The color fringe has its own width and strength in the shader and no longer depe
 
 ## Limits
 
-- Android only. The lens needs API 33. Below that the code skips the lens shader; that path has not been run.
-- Run on one phone, Android 16 (API 36). Low-end devices have not been profiled.
+- Android only. The lens needs API 33. On API 32 the code skips the lens shader and the pill is drawn as a plain translucent capsule without refraction or color fringe; that was run on an emulator in the light theme only. Below API 32 has not been run.
+- Run on one phone, Android 16 (API 36), and on x86_64 emulators for API 32 to 35. The emulators use software rendering, so they say nothing about frame rate. Low-end devices have not been profiled.
 - The fringe is thin, and is easiest to see where the rim crosses a sharp edge in the content. Over flat color it is faint.
 - Right-to-left layouts are handled in the code and have not been tried.
 - Equal-width slots in one row. Badges, labels and similar belong in the tab content you pass in.

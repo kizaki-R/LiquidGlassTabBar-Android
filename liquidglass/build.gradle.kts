@@ -36,7 +36,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.kizaki-R"
                 artifactId = "liquidglass"
-                version = "0.1.0"
+                version = "0.2.0"
             }
         }
     }
