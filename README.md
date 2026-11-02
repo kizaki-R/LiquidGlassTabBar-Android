@@ -166,7 +166,7 @@ The color fringe has its own width and strength in the shader and no longer depe
 ## Limits
 
 - Android only. The lens needs API 33. On API 32 the code skips the lens shader and the pill is drawn as a plain translucent capsule without refraction or color fringe; that was run on an emulator in the light theme only. Below API 32 has not been run.
-- Run on one phone, Android 16 (API 36), and on x86_64 emulators for API 32 to 35. The emulators use software rendering, so they say nothing about frame rate. Low-end devices have not been profiled.
+- Run on one phone, Android 16 (API 36), and on x86_64 emulators for API 32 to 35. The emulators use software rendering, so they say nothing about frame rate. Performance on low-end devices has not been measured and no measurement is planned; if frame rate matters on your target devices, test there.
 - The fringe is thin, and is easiest to see where the rim crosses a sharp edge in the content. Over flat color it is faint.
 - Right-to-left layouts are handled in the code and have not been tried.
 - Equal-width slots in one row. Badges, labels and similar belong in the tab content you pass in.
