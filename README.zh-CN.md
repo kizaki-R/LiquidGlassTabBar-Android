@@ -164,7 +164,7 @@ claude plugin install liquid-glass-tab-bar@liquid-glass-tab-bar --scope user
 npx skills add kizaki-R/LiquidGlassTabBar-Android -g
 ```
 
-也可以手动把文件夹复制到项目的 `.claude/skills/`（或 `~/.claude/skills/`），这是我们实际用过的唯一一条路。上面两个命令都还没实际跑过。
+也可以手动把文件夹复制到项目的 `.claude/skills/`（或 `~/.claude/skills/`）。Claude Code 的两个命令，在 Windows 的 Claude Code 2.1.319 上安装成功了；`npx skills` 那条还没跑过。
 
 ## 工作方式
 

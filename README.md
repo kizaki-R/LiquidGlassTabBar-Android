@@ -164,7 +164,7 @@ For other agents, the [Skills CLI](https://skills.sh) reads the same folder:
 npx skills add kizaki-R/LiquidGlassTabBar-Android -g
 ```
 
-Or copy the folder into your project's `.claude/skills/` (or `~/.claude/skills/`) by hand, which is the one route we have used. Neither command above has been run yet.
+Or copy the folder into your project's `.claude/skills/` (or `~/.claude/skills/`) by hand. The two Claude Code commands installed the plugin on Claude Code 2.1.319 on Windows; the `npx skills` command has not been run.
 
 ## How it works
 
