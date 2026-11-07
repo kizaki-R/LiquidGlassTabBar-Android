@@ -1,0 +1,14 @@
+{
+  "name": "liquid-glass-tab-bar",
+  "owner": {
+    "name": "kizaki-R"
+  },
+  "description": "A skill for adding and tuning the LiquidGlassTabBar-Android bottom tab bar in a Jetpack Compose app.",
+  "plugins": [
+    {
+      "name": "liquid-glass-tab-bar",
+      "source": "./",
+      "description": "Teaches the assistant to add the liquid-glass bottom tab bar to a Compose app and tune its size, refraction, color fringe, speed and colors."
+    }
+  ]
+}

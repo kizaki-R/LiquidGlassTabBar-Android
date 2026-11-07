@@ -149,7 +149,22 @@ LiquidGlassTabBar(/* ... */ darkTheme = darkTheme, style = style) { /* ... */ }
 
 ## 搭配 AI 编程助手
 
-`skills/liquid-glass-tab-bar` 文件夹是一个 Claude Code 技能。复制到项目的 `.claude/skills/`（或 `~/.claude/skills/`），助手就知道怎么加上这个底栏、哪个字段对应哪种外观，以及哪些错要避开。
+`skills/liquid-glass-tab-bar` 文件夹是一个 Claude Code 技能，内容是怎么加上这个底栏、哪个字段对应哪种外观，以及哪些错要避开。
+
+Claude Code 用插件安装：
+
+```bash
+claude plugin marketplace add kizaki-R/LiquidGlassTabBar-Android
+claude plugin install liquid-glass-tab-bar@liquid-glass-tab-bar --scope user
+```
+
+其他助手可以用 [Skills CLI](https://skills.sh)，它会读同一个文件夹：
+
+```bash
+npx skills add kizaki-R/LiquidGlassTabBar-Android -g
+```
+
+也可以手动把文件夹复制到项目的 `.claude/skills/`（或 `~/.claude/skills/`），这是我们实际用过的唯一一条路。上面两个命令都还没实际跑过。
 
 ## 工作方式
 

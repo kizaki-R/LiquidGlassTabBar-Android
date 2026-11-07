@@ -149,7 +149,22 @@ All 39 fields, with the light and dark defaults, are in [docs/PARAMETERS.md](doc
 
 ## Using it with an AI coding assistant
 
-The `skills/liquid-glass-tab-bar` folder is a Claude Code skill. Copy it into your project's `.claude/skills/` (or `~/.claude/skills/`) and the assistant knows how to add the bar, which fields change which part of the look, and the mistakes to avoid.
+The `skills/liquid-glass-tab-bar` folder is a Claude Code skill. It tells the assistant how to add the bar, which fields change which part of the look, and the mistakes to avoid.
+
+For Claude Code, install it as a plugin:
+
+```bash
+claude plugin marketplace add kizaki-R/LiquidGlassTabBar-Android
+claude plugin install liquid-glass-tab-bar@liquid-glass-tab-bar --scope user
+```
+
+For other agents, the [Skills CLI](https://skills.sh) reads the same folder:
+
+```bash
+npx skills add kizaki-R/LiquidGlassTabBar-Android -g
+```
+
+Or copy the folder into your project's `.claude/skills/` (or `~/.claude/skills/`) by hand, which is the one route we have used. Neither command above has been run yet.
 
 ## How it works
 

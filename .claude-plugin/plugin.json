@@ -1,0 +1,10 @@
+{
+  "name": "liquid-glass-tab-bar",
+  "version": "0.2.0",
+  "description": "A skill for adding and tuning the LiquidGlassTabBar-Android bottom tab bar in a Jetpack Compose app.",
+  "author": {
+    "name": "kizaki-R"
+  },
+  "repository": "https://github.com/kizaki-R/LiquidGlassTabBar-Android",
+  "homepage": "https://github.com/kizaki-R/LiquidGlassTabBar-Android"
+}
